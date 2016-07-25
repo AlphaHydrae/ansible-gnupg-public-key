@@ -1,0 +1,25 @@
+---
+galaxy_info:
+  author: Simon Oulevay (Alpha Hydrae)
+  description: Import a GnuPG key from a key server.
+  license: MIT
+  min_ansible_version: 2.0
+
+  platforms:
+    - name: Darwin
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+    - name: Ubuntu
+      versions:
+        - all
+
+  galaxy_tags:
+    - gnupg
+    - publickey
+
+dependencies:
+  - role: AlphaHydrae.gnupg
+  - role: AlphaHydrae.multipass

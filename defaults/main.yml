@@ -1,0 +1,4 @@
+---
+gpg_bin: gpg
+gpg_key_server: "hkp://keys.gnupg.net"
+gpg_user: "{{ user }}"
