@@ -20,6 +20,7 @@ galaxy_info:
     - gnupg
     - publickey
 
+allow_duplicates: true
 dependencies:
   - role: AlphaHydrae.gnupg
   - role: AlphaHydrae.multipass
