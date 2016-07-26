@@ -1,4 +1,4 @@
-- name: Check if the key already exists
+- name: Check if the GnuPG key already exists
   shell: "{{ gpg_bin }} --list-keys {{ gpg_key_fingerprint }} &>/dev/null"
   environment:
     PATH: "{{ host_package_manager_paths }}{{ ansible_env.PATH }}"
@@ -7,7 +7,7 @@
   register: command_result
   failed_when: command_result.rc != 0 and command_result.rc != 2
   changed_when: command_result.rc != 0 and command_result.rc != 2
-- name: Request the key from the server
+- name: Request the GnuPG key from the server
   command: "{{ gpg_bin }} --keyserver {{ gpg_key_server }} --recv-keys {{ gpg_key_fingerprint }}"
   environment:
     PATH: "{{ host_package_manager_paths }}{{ ansible_env.PATH }}"
